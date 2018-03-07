@@ -1,0 +1,37 @@
+{
+  "name": "webpacktest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "singleStart": "webpack --config ./Single/webpack.config.js --progress",
+    "singleBuild": "set NODE_ENV=production && webpack --config ./Single/webpack.production.config.js --progress",
+    "multiStart": "webpack --config ./Multi/webpack.config.js --progress",
+    "multiBuild": "set NODE_ENV=production && webpack --config ./Multi/webpack.production.config.js --progress",
+    "singleServer": "webpack-dev-server --content-base Single/build/pro && webpack-dev-server --open",
+    "multiServer": "webpack-dev-server --content-base Multi/build/pro && webpack-dev-server --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-react-transform": "^3.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "html-webpack-plugin": "^2.30.1",
+    "postcss-loader": "^2.0.9",
+    "react-transform-hmr": "^1.0.4",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
